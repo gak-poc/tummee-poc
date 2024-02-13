@@ -1,0 +1,199 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-02-13T16:32:16.063Z",
+    "end": "2024-02-13T16:33:27.324Z",
+    "duration": 71261,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "9ac1889a-b848-424c-b33c-e168700e167d",
+      "title": "",
+      "fullFile": "C:\\Users\\DELL\\Documents\\Tummee-POC\\testcases\\Sequence_test.js",
+      "file": "\\testcases\\Sequence_test.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3596273f-8af1-411f-998a-c34f459f44a8",
+          "title": "Login",
+          "fullFile": "C:\\Users\\DELL\\Documents\\Tummee-POC\\testcases\\Sequence_test.js",
+          "file": "\\testcases\\Sequence_test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook: codeceptjs.beforeSuite in \"Login\"",
+              "fullTitle": "Login \"before all\" hook: codeceptjs.beforeSuite in \"Login\"",
+              "timedOut": false,
+              "duration": 3,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "scenario.suiteSetup(suite)",
+              "err": {},
+              "uuid": "c2e17059-d6a0-493a-b369-1dbe598ffe21",
+              "parentUUID": "3596273f-8af1-411f-998a-c34f459f44a8",
+              "isHook": true,
+              "skipped": false
+            },
+            {
+              "title": "\"before each\" hook: codeceptjs.before in \"Login\"",
+              "fullTitle": "Login \"before each\" hook: codeceptjs.before in \"Login\"",
+              "timedOut": false,
+              "duration": 3205,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "scenario.setup(suite)",
+              "err": {},
+              "uuid": "2412843b-6cb7-41b1-9634-13e19246f53d",
+              "parentUUID": "3596273f-8af1-411f-998a-c34f459f44a8",
+              "isHook": true,
+              "skipped": false
+            },
+            {
+              "title": "\"before each\" hook: Before in \"Login\"",
+              "fullTitle": "Login \"before each\" hook: Before in \"Login\"",
+              "timedOut": false,
+              "duration": 5223,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "I }) => {\n  await I.amOnPage(\"/\");\n  // Verify page load\n  await I.isElementAvailable(loginPage.locators.buttons.loginButton);\n  await I.clickElement(loginPage.locators.buttons.loginButton);\n  // wait for page/url update\n  await I.waitInUrl(\n    tummeePortalUrls.urls.login,\n    constantsPage.waitTime.PAGE_LOAD_WAIT_TIME\n  );\n  await I.fillValue(\"#email\", loginCredentials.email); //using id\n  await I.fillValue(\"#pwd\", loginCredentials.password); // using id\n  await I.click(\"//button[text() = 'Login']\"); //using relative xpath and text\n  await I.waitInUrl(\"/user\", 60);",
+              "err": {},
+              "uuid": "a06e6e09-86a7-42b4-9813-20005fb7ffff",
+              "parentUUID": "3596273f-8af1-411f-998a-c34f459f44a8",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook: codeceptjs.afterSuite in \"Login\"",
+              "fullTitle": "Login \"after all\" hook: codeceptjs.afterSuite in \"Login\"",
+              "timedOut": false,
+              "duration": 0,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "scenario.suiteTeardown(suite)",
+              "err": {},
+              "uuid": "3e4b71cf-99b5-4edc-896a-9982c2a25d38",
+              "parentUUID": "3596273f-8af1-411f-998a-c34f459f44a8",
+              "isHook": true,
+              "skipped": false
+            },
+            {
+              "title": "\"after each\" hook: finalize codeceptjs in \"Login\"",
+              "fullTitle": "Login \"after each\" hook: finalize codeceptjs in \"Login\"",
+              "timedOut": false,
+              "duration": 100,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "scenario.teardown(suite)",
+              "err": {},
+              "uuid": "1111ae98-a1ca-4329-b907-45299d6efe8b",
+              "parentUUID": "3596273f-8af1-411f-998a-c34f459f44a8",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "T1: Login and create sequence @Login",
+              "fullTitle": "Login: T1: Login and create sequence @Login",
+              "timedOut": false,
+              "duration": 62722,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  \"✔ I am on page \\\"/\\\"\",\n  \"✔ I wait for element \\\"//input[@type = 'submit' and @value = 'Login']\\\", 20\",\n  \"\\\"//input[@type = 'submit' and @value = 'Login']\\\" located on the screen.\",\n  \"✔ I add mochawesome context \\\"\\\"//input[@type = 'submit' and @value = 'Login']\\\" located on the screen.\\\"\",\n  \"✔ I wait for element \\\"//input[@type = 'submit' and @value = 'Login']\\\", 20\",\n  \"✔ I wait for enabled \\\"//input[@type = 'submit' and @value = 'Login']\\\", 20\",\n  \"✔ I wait for clickable \\\"//input[@type = 'submit' and @value = 'Login']\\\", 20\",\n  \"✔ I wait for visible \\\"//input[@type = 'submit' and @value = 'Login']\\\", 20\",\n  \"✔ I click \\\"//input[@type = 'submit' and @value = 'Login']\\\"\",\n  \"✔ I wait in url \\\"/login\\\", 60\",\n  \"✔ I wait for element \\\"#email\\\", 20\",\n  \"✔ I wait for enabled \\\"#email\\\", 20\",\n  \"✔ I wait for visible \\\"#email\\\", 20\",\n  \"✔ I fill field \\\"#email\\\", \\\"akshaymeets@gmail.com\\\"\",\n  \"✔ I grab value from \\\"#email\\\"\",\n  \"\\\"akshaymeets@gmail.com\\\" filled at input box with locator \\\"#email\\\"\",\n  \"✔ I add mochawesome context \\\"\\\"akshaymeets@gmail.com\\\" filled at input box with locator \\\"#email\\\"\\\"\",\n  \"✔ I wait for element \\\"#pwd\\\", 20\",\n  \"✔ I wait for enabled \\\"#pwd\\\", 20\",\n  \"✔ I wait for visible \\\"#pwd\\\", 20\",\n  \"✔ I fill field \\\"#pwd\\\", \\\"Test@1234\\\"\",\n  \"✔ I grab value from \\\"#pwd\\\"\",\n  \"\\\"Test@1234\\\" filled at input box with locator \\\"#pwd\\\"\",\n  \"✔ I add mochawesome context \\\"\\\"Test@1234\\\" filled at input box with locator \\\"#pwd\\\"\\\"\",\n  \"✔ I click \\\"//button[text() = 'Login']\\\"\",\n  \"✔ I wait in url \\\"/user\\\", 60\",\n  \"✔ I wait for element \\\"//li/a[text() = 'Create Sequence']\\\", 20\",\n  \"\\\"//li/a[text() = 'Create Sequence']\\\" located on the screen.\",\n  \"✔ I add mochawesome context \\\"\\\"//li/a[text() = 'Create Sequence']\\\" located on the screen.\\\"\",\n  \"✔ I wait for element \\\"//li/a[text() = 'Create Sequence']\\\", 20\",\n  \"✔ I wait for enabled \\\"//li/a[text() = 'Create Sequence']\\\", 20\",\n  \"✔ I wait for clickable \\\"//li/a[text() = 'Create Sequence']\\\", 20\",\n  \"✔ I wait for visible \\\"//li/a[text() = 'Create Sequence']\\\", 20\",\n  \"✔ I click \\\"//li/a[text() = 'Create Sequence']\\\"\",\n  \"✔ I wait in url \\\"/addtitle\\\", 60\",\n  \"Navigated to Create Sequence Screen. Landing URL verified.\",\n  \"✔ I add mochawesome context \\\"Navigated to Create Sequence Screen. Landing URL verified.\\\"\",\n  \"✔ I wait for element \\\"#txtSequenceTitle\\\", 20\",\n  \"\\\"#txtSequenceTitle\\\" located on the screen.\",\n  \"✔ I add mochawesome context \\\"\\\"#txtSequenceTitle\\\" located on the screen.\\\"\",\n  \"✔ I wait for element \\\"#txtSequenceTitle\\\", 20\",\n  \"✔ I wait for enabled \\\"#txtSequenceTitle\\\", 20\",\n  \"✔ I wait for visible \\\"#txtSequenceTitle\\\", 20\",\n  \"✔ I fill field \\\"#txtSequenceTitle\\\", \\\"Test1\\\"\",\n  \"✔ I grab value from \\\"#txtSequenceTitle\\\"\",\n  \"\\\"Test1\\\" filled at input box with locator \\\"#txtSequenceTitle\\\"\",\n  \"✔ I add mochawesome context \\\"\\\"Test1\\\" filled at input box with locator \\\"#txtSequenceTitle\\\"\\\"\",\n  \"✔ I wait for element \\\"#js-yoga-type\\\", 20\",\n  \"✔ I wait for enabled \\\"#js-yoga-type\\\", 20\",\n  \"✔ I wait for clickable \\\"#js-yoga-type\\\", 20\",\n  \"✔ I wait for visible \\\"#js-yoga-type\\\", 20\",\n  \"✔ I click \\\"#js-yoga-type\\\"\",\n  \"✔ I wait for element \\\"//option[@value = 'Yoni']\\\", 20\",\n  \"\\\"//option[@value = 'Yoni']\\\" located on the screen.\",\n  \"✔ I add mochawesome context \\\"\\\"//option[@value = 'Yoni']\\\" located on the screen.\\\"\",\n  \"✔ I click \\\"//select[@id = 'js-yoga-type']//option[contains(@value,'Yoni')]\\\"\",\n  \"✔ I wait for element \\\"#createSequenceGetStarted\\\", 20\",\n  \"✔ I wait for enabled \\\"#createSequenceGetStarted\\\", 20\",\n  \"✔ I wait for clickable \\\"#createSequenceGetStarted\\\", 20\",\n  \"✔ I wait for visible \\\"#createSequenceGetStarted\\\", 20\",\n  \"✔ I click \\\"#createSequenceGetStarted\\\"\",\n  \"T1__Login__8c447eca-b37e-484e-b6df-baa87ea7dff7.failed.png\"\n]",
+              "code": "I }) => {\n  // Login steps covered in Before Hook\n  await sequencePage.navigateToCreateSequence();\n  await I.isElementAvailable(\"#txtSequenceTitle\"); //input id\n  await I.fillValue(\"#txtSequenceTitle\", sequenceName);\n  // Not working as a select box as checkbox is not available\n  // await I.isElementAvailable(\"#js-yoga-type\");\n  // await I.selectOption(\"#js-yoga-type\", \"Acro\");\n  await I.clickElement(\"#js-yoga-type\");\n  await I.isElementAvailable(`//option[@value = '${sequenceType}']`);\n  await I.click(\n    `//select[@id = 'js-yoga-type']//option[contains(@value,'${sequenceType}')]`\n  );\n  await I.clickElement(\"#createSequenceGetStarted\"); // Clicking button by id\n  await I.waitInUrl(\n    tummeePortalUrls.urls.createSequence,\n    constantsPage.waitTime.PAGE_LOAD_WAIT_TIME\n  );\n  // Create Sequence by selecting every option from the sequence array\n  let counter = 0;\n  await sequence.forEach((pose) => {\n    //select element from the available poses\n    I.isElementAvailable(\n      `//ul[@id='selectYogaSequencePoses']//p[text() = '${pose}']`\n    );\n    I.click(`//ul[@id='selectYogaSequencePoses']//p[text() = '${pose}']`);\n    //verify selection - IN PARTICULAR ORDER\n    I.isElementAvailable(\n      `//ul[@id='yogaSequenceSelectedPoses']/li[${++counter}]//p[text() = '${pose}']`\n    );\n  });\n  //await I.clickElement(sequencePage.locators.buttons.saveSequence);\n  // // Now add another yoga pose to the right of 2nd yoga pose\n  // await I.isElementAvailable(\n  //   `//ul[@id='yogaSequenceSelectedPoses']//p[text() = '${sequence[1]}']//following-sibling::p[@title='Variations']/i`\n  // );",
+              "err": {
+                "message": "Error: expected url to include /yoga/sequence, but found https://www.tummee.com/user/addtitle",
+                "estack": "Error: expected url to include /yoga/sequence, but found https://www.tummee.com/user/addtitle\n    at C:\\Users\\DELL\\Documents\\Tummee-POC\\node_modules\\codeceptjs\\lib\\helper\\WebDriver.js:2237:17\n    at async Test.<anonymous> (testcases\\Sequence_test.js:56:3)",
+                "diff": null
+              },
+              "uuid": "8c447eca-b37e-484e-b6df-baa87ea7dff7",
+              "parentUUID": "3596273f-8af1-411f-998a-c34f459f44a8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "8c447eca-b37e-484e-b6df-baa87ea7dff7"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 62722,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 0
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 0
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "10.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "[status]_[datetime]-[name]-report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "output",
+        "reportFilename": "[status]_[datetime]-[name]-report"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
